@@ -14,7 +14,8 @@ const images = [
   },
 ];
 
-images.forEach(image => {
-  galleryList.insertAdjacentHTML('afterend', 
-  `<li class='gallery__item'><img src='${image.url}' alt='${image.alt}' height='1080' /></li>`);
+const galleryItem = images.map(image => {
+  return `<li class='gallery__item'><img src='${image.url}' alt='${image.alt}' height='1080'/></li>`
 });
+
+galleryList.insertAdjacentHTML('afterend', galleryItem);

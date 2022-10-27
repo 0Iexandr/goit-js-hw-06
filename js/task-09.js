@@ -7,6 +7,7 @@ function getRandomHexColor() {
 };
 
 toggleColorBtn.addEventListener('click', () => {
-  body.style.background = getRandomHexColor();
-  colorValueView.innerText = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  body.style.background = randomColor;
+  colorValueView.innerText = randomColor;
 });
